@@ -53,6 +53,13 @@ function playGame () {
         playRound(userSelection, computerSelection);
         console.log(userScore, computerScore);
     }
+    if (userScore > computerScore) {
+        console.log(`Winner Winner Chicken Dinner! You scored ${userScore} points and the computer scored ${computerScore} points`)
+    } else if (computerScore > userScore) {
+        console.log(`You Lost...Computer scored ${computerScore} points and you scored ${userScore} points.`);
+    } else {
+        console.log(`Tie! You scored ${userScore} points and the computer scored ${computerScore} points`);
+    }
 }
 
 playGame();
