@@ -11,7 +11,7 @@ function getComputerChoice () {
 // Get's user input. RETURN keyword ensures I can use value outside the function (function scope)
 function getUserChoice () {
     const userChoice = prompt("Rock, Paper, or Scissors?", "rock");
-    return userChoice;
+    return userChoice.toLowerCase();
 }
 
 // Initialised variables that will store points
