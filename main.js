@@ -6,3 +6,8 @@ function getComputerChoice () {
   const compChoice = options[Math.floor(Math.random() * options.length)];
   return compChoice;
 }
+
+function getHumanChoice () {
+    const humanChoice = prompt("Rock, Paper, or Scissors?", "rock");
+    return humanChoice;
+}
