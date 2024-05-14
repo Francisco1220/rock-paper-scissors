@@ -45,8 +45,14 @@ function playRound (userInput, computerChoice) {
     }
 }
 
-let userSelection = getUserChoice();
-let computerSelection = getComputerChoice();
+// Play's 5 rounds of rps. Calls playRound to play 5 rounds, keeps track of score, and declares winner upon conclusion
+function playGame () {
+    for (let round = 0; round < 5; round++) {
+        let userSelection = getUserChoice();
+        let computerSelection = getComputerChoice();
+        playRound(userSelection, computerSelection);
+        console.log(userScore, computerScore);
+    }
+}
 
-playRound (userSelection, computerSelection);
-console.log(userScore, computerScore);
+playGame();
