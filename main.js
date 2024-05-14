@@ -54,11 +54,11 @@ function playGame () {
         console.log(userScore, computerScore);
     }
     if (userScore > computerScore) {
-        console.log(`Winner Winner Chicken Dinner! You scored ${userScore} points and the computer scored ${computerScore} points`)
+        console.log(`Winner Winner Chicken Dinner! User Score: ${userScore} Computer Score: ${computerScore}`)
     } else if (computerScore > userScore) {
-        console.log(`You Lost...Computer scored ${computerScore} points and you scored ${userScore} points.`);
+        console.log(`You Lost... User Score: ${userScore} Computer Score: ${computerScore}`);
     } else {
-        console.log(`Tie! You scored ${userScore} points and the computer scored ${computerScore} points`);
+        console.log(`Tie! User Score: ${userScore} Computer Score: ${computerScore}`);
     }
 }
 
