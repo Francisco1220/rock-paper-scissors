@@ -55,7 +55,7 @@ const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
 
 btn1.addEventListener("click", () => {
-    playRound(userInput = "rock", getComputerChoice())
+    playRound(userInput = "rock", getComputerChoice());
 });
 
 btn2.addEventListener("click", () => {
@@ -66,8 +66,8 @@ btn3.addEventListener("click", () => {
     playRound(userInput = "scissors", getComputerChoice())
 });
 
-
-
+const displayResult = document.querySelector("div");
+displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`
 
 
 // Play's 5 rounds of rps. Calls playRound to play 5 rounds, keeps track of score, and declares winner upon conclusion
