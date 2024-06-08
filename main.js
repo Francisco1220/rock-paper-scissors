@@ -52,7 +52,7 @@ const btn3 = document.querySelector("#btn3");
 const displayScore = document.querySelector("#div2");
 displayScore.style.marginBottom="10px";
 displayScore.style.fontSize="25px";
-displayScore.style.color="red";
+displayScore.style.color="blue";
 
 const displayWinner = document.querySelector("#div3");
 displayWinner.style.fontSize="50px";
@@ -75,6 +75,14 @@ for (let i = 0; i < btn.length; i++) {
     btn[i].style.fontSize="20px";
 }
 
+function disableButtons () {
+    if (checksWinner()) {
+            btn1.disabled = true;
+            btn2.disabled = true;
+            btn3.disabled = true;
+        }
+}
+
 const container = document.querySelector("body");
 container.setAttribute("align", "center");
 
@@ -85,6 +93,7 @@ btn1.addEventListener("click", () => {
     displayScore.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
     checksWinner();
     round++;
+    disableButtons ()
 });
 
 btn2.addEventListener("click", () => {
@@ -92,6 +101,7 @@ btn2.addEventListener("click", () => {
     displayScore.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
     checksWinner();
     round++;
+    disableButtons ()
 });
 
 btn3.addEventListener("click", () => {
@@ -99,17 +109,23 @@ btn3.addEventListener("click", () => {
     displayScore.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
     checksWinner();
     round++;
+    disableButtons ()
 });
 
 function checksWinner () {
     if (userScore === 5 && computerScore === 5) {
-        displayWinner.textContent = "It's a Tie!"
+        displayWinner.textContent = "It's a Tie!";
+        return true;
     } else if (userScore === 5 && userScore > computerScore) {
         displayWinner.textContent = "Congratulations. You are the Winner!";
+        return true;
     } else if (computerScore === 5 && computerScore > userScore) {
         displayWinner.textContent = " You Lost. Better luck next time!";
+        return true;
     }
+    return false;
 }
+
 
 // let computerSelection = getComputerChoice();
 // let userSelection = getUserChoice();
