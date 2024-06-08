@@ -51,9 +51,15 @@ const btn3 = document.querySelector("#btn3");
 
 const displayScore = document.querySelector("#div2");
 displayScore.style.marginBottom="10px";
+displayScore.style.fontSize="25px";
+displayScore.style.color="red";
+
 const displayWinner = document.querySelector("#div3");
+displayWinner.style.fontSize="50px";
+
 const displayRoundResult = document.querySelector("#div1");
 displayRoundResult.style.marginBottom="10px";
+displayRoundResult.style.fontSize="25px";
 
 const btn = document.querySelectorAll(".btn");
 btn[0].style.marginRight="10px";
@@ -68,6 +74,11 @@ for (let i = 0; i < btn.length; i++) {
     btn[i].style.borderRadius="10px";
     btn[i].style.fontSize="20px";
 }
+
+const container = document.querySelector("body");
+container.setAttribute("align", "center");
+
+
 
 btn1.addEventListener("click", () => {
     playRound(userInput = "rock", getComputerChoice());
@@ -91,12 +102,11 @@ function checksWinner () {
     if (userScore === 5 && computerScore === 5) {
         displayWinner.textContent = "It's a Tie!"
     } else if (userScore === 5 && userScore > computerScore) {
-        displayWinner.textContent = "Congratulation. You are the Winner!";
+        displayWinner.textContent = "Congratulations. You are the Winner!";
     } else if (computerScore === 5 && computerScore > userScore) {
-        displayWinner.textContent = " You Lost. Better luck next time";
+        displayWinner.textContent = " You Lost. Better luck next time!";
     }
 }
-
 
 
 // let computerSelection = getComputerChoice();
