@@ -45,22 +45,16 @@ function playRound (userInput, computerChoice) {
     }
 }
 
-// let computerSelection = getComputerChoice();
-// let userSelection = getUserChoice();
-
-// playRound(userSelection, computerSelection);
-
 const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
 
-const displayResult = document.querySelector("#div1");
+const displayResult = document.querySelector("#div2");
 displayResult.style.marginBottom="10px";
-const displayWinner = document.querySelector("#div2");
+const displayWinner = document.querySelector("#div3");
 
 
 const btn = document.querySelectorAll(".btn");
-console.log(btn)
 btn[0].style.marginRight="10px";
 btn[1].style.marginRight="10px";
 btn[2].style.marginRight="10px";
@@ -99,7 +93,10 @@ function checksWinner () {
 
 
 
+// let computerSelection = getComputerChoice();
+// let userSelection = getUserChoice();
 
+// playRound(userSelection, computerSelection);
 
 // Play's 5 rounds of rps. Calls playRound to play 5 rounds, keeps track of score, and declares winner upon conclusion
 /* function playGame () {
