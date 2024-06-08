@@ -57,6 +57,13 @@ const btn3 = document.querySelector("#btn3");
 const displayResult = document.querySelector("#div1");
 const displayWinner = document.querySelector("#div2");
 
+const btn = document.querySelectorAll(".btn");
+console.log(btn)
+btn[0].style.marginRight="10px";
+btn[1].style.marginRight="10px";
+btn[2].style.marginRight="10px";
+
+
 btn1.addEventListener("click", () => {
     playRound(userInput = "rock", getComputerChoice());
     displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
