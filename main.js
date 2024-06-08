@@ -60,17 +60,34 @@ const displayWinner = document.querySelector("#div2");
 btn1.addEventListener("click", () => {
     playRound(userInput = "rock", getComputerChoice());
     displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
+    checksWinner();
 });
 
 btn2.addEventListener("click", () => {
     playRound(userInput = "paper", getComputerChoice());
     displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
+    checksWinner();
 });
 
 btn3.addEventListener("click", () => {
     playRound(userInput = "scissors", getComputerChoice())
     displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
+    checksWinner();
 });
+
+function checksWinner () {
+    if (userScore === 5 && computerScore === 5) {
+        displayWinner.textContent = "It's a Tie!"
+    } else if (userScore === 5 && userScore > computerScore) {
+        displayWinner.textContent = "Congratulation. You are the Winner!";
+    } else if (computerScore === 5 && computerScore > userScore) {
+        displayWinner.textContent = " You Lost. Better luck next time";
+    }
+}
+
+
+
+
 
 // Play's 5 rounds of rps. Calls playRound to play 5 rounds, keeps track of score, and declares winner upon conclusion
 /* function playGame () {
