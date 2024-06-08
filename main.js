@@ -54,11 +54,12 @@ const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
 
-const displayResult = document.querySelector("div");
+const displayResult = document.querySelector("#div1");
+const displayWinner = document.querySelector("#div2");
 
 btn1.addEventListener("click", () => {
     playRound(userInput = "rock", getComputerChoice());
-    displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`
+    displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
 });
 
 btn2.addEventListener("click", () => {
