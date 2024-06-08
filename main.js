@@ -63,6 +63,12 @@ btn[0].style.marginBottom="10px";
 btn[1].style.marginBottom="10px";
 btn[2].style.marginBottom="10px";
 
+for (let i = 0; i < btn.length; i++) {
+    btn[i].style.padding="50px";
+    btn[i].style.borderRadius="10px";
+    btn[i].style.fontSize="20px";
+}
+
 btn1.addEventListener("click", () => {
     playRound(userInput = "rock", getComputerChoice());
     displayScore.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
