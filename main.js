@@ -54,21 +54,22 @@ const btn1 = document.querySelector("#btn1");
 const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
 
+const displayResult = document.querySelector("div");
+
 btn1.addEventListener("click", () => {
     playRound(userInput = "rock", getComputerChoice());
+    displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`
 });
 
 btn2.addEventListener("click", () => {
-    playRound(userInput = "paper", getComputerChoice())
+    playRound(userInput = "paper", getComputerChoice());
+    displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
 });
 
 btn3.addEventListener("click", () => {
     playRound(userInput = "scissors", getComputerChoice())
+    displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
 });
-
-const displayResult = document.querySelector("div");
-displayResult.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`
-
 
 // Play's 5 rounds of rps. Calls playRound to play 5 rounds, keeps track of score, and declares winner upon conclusion
 /* function playGame () {
