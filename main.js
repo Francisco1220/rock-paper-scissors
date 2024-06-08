@@ -45,8 +45,33 @@ function playRound (userInput, computerChoice) {
     }
 }
 
+// let computerSelection = getComputerChoice();
+// let userSelection = getUserChoice();
+
+// playRound(userSelection, computerSelection);
+
+const btn1 = document.querySelector("#btn1");
+const btn2 = document.querySelector("#btn2");
+const btn3 = document.querySelector("#btn3");
+
+btn1.addEventListener("click", () => {
+    playRound(userInput = "rock", getComputerChoice())
+});
+
+btn2.addEventListener("click", () => {
+    playRound(userInput = "paper", getComputerChoice())
+});
+
+btn3.addEventListener("click", () => {
+    playRound(userInput = "scissors", getComputerChoice())
+});
+
+
+
+
+
 // Play's 5 rounds of rps. Calls playRound to play 5 rounds, keeps track of score, and declares winner upon conclusion
-function playGame () {
+/* function playGame () {
     for (let round = 0; round < 5; round++) {
         let userSelection = getUserChoice();
         let computerSelection = getComputerChoice();
@@ -62,4 +87,4 @@ function playGame () {
     }
 }
 
-playGame();
+playGame(); */
