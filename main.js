@@ -86,30 +86,54 @@ function disableButtons () {
 const container = document.querySelector("body");
 container.setAttribute("align", "center");
 
-let round = 0;
+let round = 1;
 
 btn1.addEventListener("click", () => {
     playRound(userInput = "rock", getComputerChoice());
-    displayScore.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
+    displayScore.textContent = `Your Score: ${userScore} Computer Score: ${computerScore}`;
     checksWinner();
     round++;
     disableButtons ()
+});
+
+btn1.addEventListener("mouseover", function (event) {
+    event.target.style.backgroundColor = "grey";
+});
+
+btn1.addEventListener("mouseout", function (event) {
+    event.target.style.backgroundColor = "white";
 });
 
 btn2.addEventListener("click", () => {
     playRound(userInput = "paper", getComputerChoice());
-    displayScore.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
+    displayScore.textContent = `Your Score: ${userScore} Computer Score: ${computerScore}`;
     checksWinner();
     round++;
     disableButtons ()
 });
 
+btn2.addEventListener("mouseover", function (event) {
+    event.target.style.backgroundColor = "grey";
+});
+
+btn2.addEventListener("mouseout", function (event) {
+    event.target.style.backgroundColor = "white";
+});
+
 btn3.addEventListener("click", () => {
     playRound(userInput = "scissors", getComputerChoice())
-    displayScore.textContent = `User Score: ${userScore} Computer Score: ${computerScore}`;
+    displayScore.textContent = `Your Score: ${userScore} Computer Score: ${computerScore}`;
     checksWinner();
     round++;
     disableButtons ()
+});
+
+btn3.addEventListener("mouseover", function (event) {
+    event.target.style.backgroundColor = "grey";
+});
+
+btn3.addEventListener("mouseout", function (event) {
+    event.target.style.backgroundColor = "white";
 });
 
 function checksWinner () {
