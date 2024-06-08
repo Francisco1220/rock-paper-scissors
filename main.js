@@ -55,13 +55,18 @@ const btn2 = document.querySelector("#btn2");
 const btn3 = document.querySelector("#btn3");
 
 const displayResult = document.querySelector("#div1");
+displayResult.style.marginBottom="10px";
 const displayWinner = document.querySelector("#div2");
+
 
 const btn = document.querySelectorAll(".btn");
 console.log(btn)
 btn[0].style.marginRight="10px";
 btn[1].style.marginRight="10px";
 btn[2].style.marginRight="10px";
+btn[0].style.marginBottom="10px";
+btn[1].style.marginBottom="10px";
+btn[2].style.marginBottom="10px";
 
 
 btn1.addEventListener("click", () => {
