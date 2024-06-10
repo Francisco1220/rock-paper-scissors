@@ -97,7 +97,7 @@ btn1.addEventListener("click", () => {
 });
 
 btn1.addEventListener("mouseover", function (event) {
-    event.target.style.backgroundColor = "grey";
+    event.target.style.backgroundColor = "rgb(220,220,220)";
 });
 
 btn1.addEventListener("mouseout", function (event) {
@@ -113,7 +113,7 @@ btn2.addEventListener("click", () => {
 });
 
 btn2.addEventListener("mouseover", function (event) {
-    event.target.style.backgroundColor = "grey";
+    event.target.style.backgroundColor = "rgb(220,220,220)";
 });
 
 btn2.addEventListener("mouseout", function (event) {
@@ -129,7 +129,7 @@ btn3.addEventListener("click", () => {
 });
 
 btn3.addEventListener("mouseover", function (event) {
-    event.target.style.backgroundColor = "grey";
+    event.target.style.backgroundColor = "rgb(220,220,220)";
 });
 
 btn3.addEventListener("mouseout", function (event) {
